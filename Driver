@@ -1,0 +1,55 @@
+/**
+ * This driver class takes input from the Player and Team classes.
+ * 
+ * @author My teacher Sean Yaw created the original Driver code for a class project, but I have added on to it. 
+ * @version (version 1.0 , October 6, 2016)
+ */
+
+public class Driver
+{
+    
+    public static void main(String[] args)
+    {        
+        //create instance of Player class and set the number of at bats and hits
+        Player p1 = new Player("Buster Posey");
+        p1.addAtBats(539);
+        p1.addHits(155);
+        
+        //create instance of Player class and set the number of at bats and hits
+        Player p2 = new Player("Brandon Belt");
+        p2.addAtBats(542);
+        p2.addHits(149);
+        
+        //create instance of Player class and set the number of at bats and hits
+        Player p3 = new Player("Joe Panik");
+        p3.addAtBats(526);
+        p3.addHits(111);
+        
+        Player p4 = new Player("Brandon Crawford");
+        p4.addAtBats(553);
+        p4.addHits(152);
+        
+        Player p5 = new Player("Matt Duffy");
+        p5.addAtBats(257);
+        p5.addHits(65);
+        
+        Player p6 = new Player("Angel Pagan");
+        p6.addAtBats(495);
+        p6.addHits(137);
+        
+        Player p7 = new Player("Denard Span");
+        p7.addAtBats(572);
+        p7.addHits(152);
+        
+        Player p8 = new Player("Hunter Pence");
+        p8.addAtBats(395);
+        p8.addHits(114);
+        
+        
+        //create instance of Team class and assign Players
+        Team t1 = new Team("Giants", p2, p1, p3, p4, p5, p6, p7, p8);
+
+        //print out statistics for the team
+        t1.printStats();
+    }
+}
