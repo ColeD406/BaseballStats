@@ -1,0 +1,81 @@
+/**
+ * This Team class holds the constructor and methods regarding combined player (team) stats.
+ * 
+ * @author Cole Doty
+ * @version (version 1.0 , October 6, 2016)
+ */
+
+public class Team
+{
+    private String teamName;
+    private Player player1;
+    private Player player2;
+    private Player player3;
+    private Player player4;
+    private Player player5;
+    private Player player6;
+    private Player player7;
+    private Player player8;
+    private double teamAvg;
+    private int teamBats;
+    private int teamHits;
+    
+//constructor
+    public Team (String inName, Player p2, Player p1, Player p3, Player p4, Player p5, Player p6, Player p7, Player p8)
+    {
+        teamName = inName;
+        player1 = p1;
+        player2 = p2;
+        player3 = p3;
+        player4 = p4;
+        player5 = p5;
+        player6 = p6;
+        player7 = p7;
+        player8 = p8;
+        
+    }
+    
+//this finds the team bating avg   
+    
+    public double printStatsTeamAvg()
+    {
+        teamAvg = (player1.inAddHits() + player2.inAddHits() + player3.inAddHits() + player4.inAddHits() + player5.inAddHits() + player6.inAddHits() + player7.inAddHits() + player8.inAddHits()) / (player1.inAddBats() + player2.inAddBats() + player3.inAddBats() + player4.inAddBats() + player5.inAddBats() + player6.inAddBats() + player7.inAddBats() + player8.inAddBats());
+        return teamAvg;
+    }
+    
+//finds the number ofteam at bats
+    
+    public int printStatsTeamBats()
+    {
+         teamBats = player1.addBats() + player2.addBats() + player3.addBats() + player4.addBats() + player5.addBats() + player6.addBats() + player7.addBats() + player8.addBats();
+         return teamBats;
+    }
+    
+//finds the total team hits
+    
+    public int printStatsTeamHits()
+    {
+        teamHits = player1.addInHits() + player2.addInHits() + player3.addInHits() +  + player4.addInHits() + player5.addInHits() + player6.addInHits() + player7.addInHits() + player8.addInHits();
+        return teamHits;
+    }
+    
+//prints the team stats    
+    
+    public void printStats()
+    {
+        System.out.println(teamName + ": ");
+        System.out.println("    At Bats: " + printStatsTeamBats());
+        System.out.println("    Hits: " + printStatsTeamHits());
+        System.out.println("    Batting Avg: " + printStatsTeamAvg());
+        System.out.println("    Players:");
+        System.out.println("        " + player1.getName() + "---> At Bats: " + player1.addBats() + ", Hits: " + player1.addInHits() + ", Batting Avg: " + player1.batAverage());
+        System.out.println("        " + player2.getName() + "---> At Bats: " + player2.addBats() + ", Hits: " + player2.addInHits() + ", Batting Avg: " + player2.batAverage());
+        System.out.println("        " + player3.getName() + "---> At Bats: " + player3.addBats() + ", Hits: " + player3.addInHits() + ", Batting Avg: " + player3.batAverage());
+        System.out.println("        " + player4.getName() + "---> At Bats: " + player4.addBats() + ", Hits: " + player4.addInHits() + ", Batting Avg: " + player4.batAverage());
+        System.out.println("        " + player5.getName() + "---> At Bats: " + player5.addBats() + ", Hits: " + player5.addInHits() + ", Batting Avg: " + player5.batAverage());
+        System.out.println("        " + player6.getName() + "---> At Bats: " + player6.addBats() + ", Hits: " + player6.addInHits() + ", Batting Avg: " + player6.batAverage());
+        System.out.println("        " + player7.getName() + "---> At Bats: " + player7.addBats() + ", Hits: " + player7.addInHits() + ", Batting Avg: " + player7.batAverage());
+        System.out.println("        " + player8.getName() + "---> At Bats: " + player8.addBats() + ", Hits: " + player8.addInHits() + ", Batting Avg: " + player8.batAverage());
+        
+    }
+}
