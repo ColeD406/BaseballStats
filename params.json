@@ -1,0 +1,6 @@
+{
+  "name": "Baseball Stats",
+  "tagline": "This Java program measures statistics of baseball players and takes their batting averages. Then it averages all the players hits and at-bats to create the team batting average.",
+  "body": "# BaseballStats\r\nThis Java program measures statistics of baseball players and takes their batting averages. Then it averages all the players hits and at-bats to create the team batting average. The team and players I have used are from the SF Giants with stats from the current 2016 season as of October 6, 2016\r\n\r\nTo run the program run the driver as a java application.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
