@@ -1,0 +1,88 @@
+/**
+ * This Player class holds the constructor and methods regarding player stats.
+ * 
+ * @author Cole Doty
+ * @version (version 1.0 , October 6, 2016)
+ */
+
+
+public class Player
+{
+    private String player;
+    private int atBats;
+    private int hits;
+    private double average;
+    private double totalAvg;
+    private double inHits;
+    private double inBats;
+    private double teamAvg;
+    
+//Constructor    
+    
+    public Player(String inPlayer)
+    {
+        player = inPlayer;
+    }
+    
+//adds at bats
+    
+    public int addAtBats(int numAtBats)
+    {
+        atBats = numAtBats;
+        return atBats;
+    }
+    
+//gets the name of player    
+    
+    public String getName()
+    {
+        return player;
+    }
+    
+//adds hits
+    
+    public int addHits(int numHits)
+    {
+        hits = numHits;
+        return hits;
+    }
+    
+//add at bats
+    
+    public int addBats()
+    {
+        return atBats;
+    }
+
+//add hits method
+
+    public int addInHits()
+    {
+        return hits;
+    }
+    
+//calculates batting average   
+
+    public double batAverage()
+    {
+        average = (double) hits / atBats;
+        return average;
+    }
+    
+//adds hits
+
+    public double inAddHits()
+    {
+        inHits = (double) hits;
+        return inHits;
+    }
+    
+ //returns at bats 
+ 
+    public double inAddBats()
+    {
+        inBats = (double) atBats;
+        return inBats;
+    }
+    
+}
